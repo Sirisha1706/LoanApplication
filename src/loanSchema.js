@@ -12,7 +12,7 @@ const directorSchema = new mongoose.Schema({
     required: true, 
     match: /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/, // ✅ PAN format validation
   },
-  tags: [tagSchema],
+  tags: [{type: String, required: true}, {type: String, default: false}],
 });
 
 const guarantorSchema = new mongoose.Schema({

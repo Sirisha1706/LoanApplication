@@ -27,19 +27,16 @@ const schema = {
               type: "array",
               minItems: 1,
               items: {
-                type: "object",
+                type: "string",
                 required: ["role"],
-                properties: {
-                  role: { "type": "string" },
-                  authorizedSignatory: { "type": "boolean" }
-                }
+                properties: ["role", 'authorizedSignatory']
               }
             }
           }
         }
       },    
-    creditScore: { type: "string"},
-    loanAmount: { type: "string", minimum: 50000, maximum: 500000 },
+    creditScore: { type: "number"},
+    loanAmount: { type: "number", minimum: 50000, maximum: 500000 },
   },
 };
 
